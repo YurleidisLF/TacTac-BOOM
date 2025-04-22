@@ -1,0 +1,43 @@
+<!-- Fondo animado con formas -->
+<div class="background-animation">
+    <div class="shape" style="left: 10%; animation-delay: 0s;">●</div>
+    <div class="shape" style="left: 30%; animation-delay: 2s;">✖</div>
+    <div class="shape" style="left: 50%; animation-delay: 4s;">●</div>
+    <div class="shape" style="left: 70%; animation-delay: 1s;">✖</div>
+    <div class="shape" style="left: 90%; animation-delay: 3s;">●</div>
+  </div>
+  
+  <!-- Contenedor principal del juego -->
+  <div class="outer-container">
+    <!-- Pantalla de bienvenida -->
+    <h2 *ngIf="newPage">Bienvenido al juego del Tic Tac Toe</h2>
+  
+    <!-- Turno del jugador -->
+    <h2 *ngIf="!champion && !gameDraw && !newPage">Turno actual: {{ getPlayer }}</h2>
+  
+    <!-- Mensajes de victoria o empate -->
+    <h2 *ngIf="champion">¡Jugador {{ champion }} ha ganado!</h2>
+    <h2 *ngIf="gameDraw">¡Empate!</h2>
+  
+    <!-- Botón para comenzar o reiniciar -->
+    <button *ngIf="champion || gameDraw || newPage" (click)="startGame()">
+      Comenzar Juego
+    </button>
+  
+    <!-- Tablero del juego -->
+    <main *ngIf="!champion && !gameDraw">
+      <app-game-board
+        *ngFor="let val of square; let i = index"
+        [value]="val"
+        (click)="makeMove(i)">
+      </app-game-board>
+    </main>
+  </div>
+  
+  <!-- Footer bonito -->
+  <footer>
+    <p>©2025 Desarrollado por Yurleidis Lopez </p>
+   <p><a href="mailto:yurleidislf@gmail.com">📧 yurleidislf@gmail.com</a></p> 
+    <p><a href="https://portafolio-rpersonal.vercel.app/inicio" target="_blank">🌐 Portafolio</a></p>
+  </footer>
+  

@@ -1,0 +1,42 @@
+# Ver más en http://help.github.com/ignore-files/ para más información sobre cómo ignorar archivos.
+
+/* Salida compilada */
+dist
+tmp
+out-tsc
+bazel-out
+
+/* Node */
+node_modules
+npm-debug.log
+yarn-error.log
+
+/* IDEs y editores */
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+/* Visual Studio Code */
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+/* Varios */
+.angular/cache
+.sass-cache/
+connect.lock
+coverage
+libpeerconnection.log
+testem.log
+typings
+
+/* Archivos del sistema */
+.DS_Store
+Thumbs.db
