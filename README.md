@@ -15,5 +15,5 @@ Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-
 
 ## Enlace al juego desplegado
 
-Accede a la aplicación en [tu URL en Vercel]([URL_DEL_JUEGO](https://tac-tac-boom.vercel.app/)).
+Accede a la aplicación en https://tac-tac-boom.vercel.app/
 
